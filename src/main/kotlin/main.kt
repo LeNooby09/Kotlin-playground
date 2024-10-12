@@ -1,3 +1,8 @@
+//
+//                          THIS CODE WILL PROBABLY NOT RUN
+//
+//                              #LetsRawdogKotlinWithoutIDE
+//
 fun main(args : Array<String>)                                          {
     println("Hello from the Zed Editor, I forgot to install the IDE.")
     println("I am doing stuff here.")
@@ -67,5 +72,130 @@ fun main(args : Array<String>)                                          {
     println(myText.toUpperCase())                                           // Prints the string in uppercase
     println(myText.toLowerCase())                                           // Prints the string in lowercase
 
+    val myText2 = "I am learning Kotlin"
+    println(myText.compareTo(myText2))                                      // Compares two strings                             | return 0 if true
 
+    println(myText2.indexOf("Kotlin"))                                      // Returns the index of the first occurrence of the specified text in the string
+
+    println(myText + " " + myText2)                                         // Concatenates two strings
+    println(myText.plus(myText2))                                           // Concatenates two strings    NOTE: returns without whitespace
+    println($myText $myText2)                                               // Concatenates two strings using String templates/interpolation
+
+    // ------------ BOOLEANS ------------
+
+    val KotlinIsFun: Boolean = true                                         // Static boolean value
+    var NanamiWillReleaseMe: Boolean = false                                // Dynamic boolean value
+
+    println(KotlinIsFun)                                                    // returns true
+
+    println(0 = 0)                                                          // also true
+
+    // ------------ IF STATEMENTS ------------
+    // they got the basics :thumps_up:
+    // you can put enire if else statements into a var or val (like a function but in a var? (i still have python syntax in my head))
+
+    val AmIFree = if (NanamiWillReleaseMe = true) "enjoy your freedom" else "YOU WILL LEARN KOTLIN"
+    println(AmIFree)
+
+    // ------------ WHEN STATEMENTS ------------
+
+    when (x) {
+        1 -> println("x is 1")
+        2 -> println("x is 2")
+        else -> println("x is neither 1 nor 2")
+    }
+
+    // ------------ WHILE LOOPS ------------
+    // Think of python yo
+    var y: Int = 1
+
+    // THE DO WHILE LOOP
+
+    do                                                                      {
+        ++y                                                                 }
+    while (x = 0);
+
+    // ------------ BREAK ------------
+
+    var i: Int = 0
+    while (i < 10) {
+        println(i)
+        i++
+        if (i == 5) {
+            break                                                               // If condition occurs, break out of the loop
+        }
+    }
+
+    // ------------ CONTINUE ------------
+
+    while (i < 10) {
+        if (i == 4) {
+            i++
+            continue                                                            // If condition occurs, do thing and continue with the loop
+        }
+        println(i)
+        i++
+    }
+
+    // ------------ ARRAYS ------------
+
+    var friends = arrayOf("Nanami", "Mey", "Amelie", "Foldster", "Pasha", "Iload", "Schtormm", "Fryl")
+    println(friends[0])                                                         // First item of the array
+
+    friends[0] = "Nanami Dark mode"                                             // Edit the first array item
+
+    println("you got " + friends.size + " friends. :D")                         // .size returns the size(amount) of the array
+
+    if ("Mey" in friends)                                                   {   // Find specific X in an array
+        println("Hello Mey")                                                }
+    else                                                                    {
+        println("Mey is not here")                                          }
+
+    for (x in friends)                                                      {
+        println(x)                                                          }   // Go through an array one by one
+
+
+    // ------------ FOR LOOP ------------
+    // no traditional for loop. can only be used to loop through things with a countable amount of numbers
+
+    // ------------ RANGES ------------
+
+    for (chars in 'a'..'z')                                                 {
+        println(chars)                                                      }
+
+    for (nums in 1..99)                                                     {
+        if (nums == 10)                                                     {
+            break                                                           }}  // Break out at 10
+
+    for (nums in 1..99)                                                     {
+        if (nums == 10)                                                     {
+            continue                                                        }}  // Skip over 10 and continue
+
+    // ------------ FUNCTIONS ------------
+
+    fun myFunction()                                                        {   // Declare a custom fun with fun
+        println("I'm still in nanami's basement")                           }
+
+    myFunction()
+
+    fun myFunctionWithParameters(name: String)                              {
+        println("Hello " + name)                                            }
+
+    myFunctionWithParameters("Kotlin")
+
+    fun myFunctionWithMultipleParameters(name: Sring, isFun: Boolean)       {
+        if (isFun == true)                                                  {
+            println(name + " is fun")                                       }
+        else                                                                {
+            println(name + "is not fun")                                    }}
+
+    myFunctionWithMultipleParameters("Kotlin", true)
+    myFunctionWithMultipleParameters("GoLang", false)
+
+    fun myFunctionWithReturn(x: Int, y: Int): Int                           {
+        return x + y                                                        }
+
+    // fun myFunctionWithReturn(x: Int, y: Int): Int = x + y                    Same as above
+
+    println(myFunctionWithReturn(3, 4))
 };
