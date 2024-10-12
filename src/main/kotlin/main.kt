@@ -8,21 +8,30 @@ fun main(args : Array<String>)                                          {
     println("I am doing stuff here.")
     println("This is fun!")                                                 // can't forget the comments ;)
     print(" woah same line :)")
+
     var Stringy: String = "String"                                          // String and mutable
     val Intiger: Int = 69                                                   // Int and Immutable
+
     var Variable: String                                                    // Declared but not assigned
+
     print(Stringy)
     print(Intiger)
+
     Variable = "assined"                                                    // Assined here
+
     println(Variable)
     println(Stringy + Variable)                                             // Add vars, I like it
+
     // ------------ DATA TYPES ------------
+
     val myNum: Int = 5                                                      // Int
     val myDoubleNum: Double = 6.9                                           // Double
     val myLetter: Char = 'D'                                                // Char
     val myBoolean: Boolean = true                                           // Boolean
     val myText: String = "this is fun"                                      // String
+
     // ------------ NUMBERS ------------
+
     val mySmallNum: Byte = 24                                               // only from -128 to 127
     val myShortNum: Short = 32767                                           // only from -32768 to 32767
     val myIntNum: Int = -2147483648                                         // only from -2147483648 to 2147483647
@@ -30,7 +39,9 @@ fun main(args : Array<String>)                                          {
     val myFloatNum: Float = 3.14F                                           // we got decimals OwO                                      | 6 decimals
     val myDoubleNum: Double = 19.99                                         // like "Float" but better                                  | fifteen decimals
     val myPowerOTNum: Double = 12E99                                        // power of ten? SCIENCE
+
     /* ------------ CONVERTING ------------
+
     toByte()                                                                be carefull. might bite your finger
     toShort()                                                               yeah, you need to grow more
     toInt()                                                                 (couldn't find a pun)
@@ -246,7 +257,7 @@ fun main(args : Array<String>)                                          {
 
     // Subclass
     class MyChildClass: MyParentClass()                                     {  // Inherit from a parent class
-        fun myFunction() {
+        fun myFunction()                                                    {
             println(x)                                                      }}
 
     // Create an object of MyChildClass and call myFunction
