@@ -198,4 +198,58 @@ fun main(args : Array<String>)                                          {
     // fun myFunctionWithReturn(x: Int, y: Int): Int = x + y                    Same as above
 
     println(myFunctionWithReturn(3, 4))
-};
+
+    // ------------ CLASSES ------------
+
+    class Friends                                                           {  // Declare a class
+        var name: String = ""
+        var isFun: String = ""
+        var horny: String = ""                                              }
+
+    val friend1 = Friends()                                                    // Create an object of the class
+    friend1.name = "Nanami"
+    friend1.isFun = "not just fun but also funny"
+    friend1.horny = "YES"
+
+    val friend2 = Friends()
+    friend2.name = "Mey"
+    friend2.isFun = "true"
+    friend2.horny = "maybe"
+
+    println(friend1.name)
+    println(friend1.isFun)
+    println(friend1.horny)
+
+    println(friend2.name)
+    println(friend2.isFun)
+    println(friend2.horny)
+
+    // ------------ CONSTRUCTORS ------------
+
+    class Friends(var name: String, var isFun: String, var horny: String)      // Compacter
+
+    val friend1 = Friends("Nanami", "not just fun but also funny", "YES")
+
+    // ------------ CLASS FUNCTIONS ------------
+
+    class Friends(var name: String, var isFun: String, var horny: String)   {
+        fun introduce()                                                     {  // Class functions can also have parameters
+            println("Hello, my name is $name and I am $isFun and $horny")   }}
+
+    val friend1 = Friends("Nanami", "not just fun but also funny", "YES")
+    friend1.introduce()
+
+    // ------------ INHERITANCE ------------
+    //  Superclass
+    open class MyParentClass                                                {
+        val x: Int = 5                                                      }
+
+    // Subclass
+    class MyChildClass: MyParentClass()                                     {  // Inherit from a parent class
+        fun myFunction() {
+            println(x)                                                      }}
+
+    // Create an object of MyChildClass and call myFunction
+    fun main()                                                              {
+        val myObj = MyChildClass()
+        myObj.myFunction()                                                  }};
